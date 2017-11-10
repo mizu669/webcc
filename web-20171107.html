@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>網頁單位測試</title>
+  <style type="text/css">
+    body {
+      font-family: \5FAE\8EDF\6B63\9ED1\9AD4, Arial;
+      font-size: 16px;
+    }
+    
+    .txt-v {
+      clear: both;
+    }
+    
+    .col-b {
+      display: inline-table;
+      margin-right: .75rem;
+    }
+    
+    .col-b div {
+      padding: 5px 45px 5px 5px;
+      border-bottom: 1px dotted #ccc;
+      position: relative;
+    }
+    
+    .col-b div sub {
+      color: #555;
+      border-radius: 4px;
+      background-color: #efefef;
+      padding: 2px 5px;
+      position: absolute;
+      right: 5px;
+      bottom: 4px;
+      font-size: 1rem;
+      transform: scale(.5);
+    }
+    
+    .txt-b {
+      font-size: .75rem;
+      color: #555;
+      border-radius: 4px;
+      background-color: #efefef;
+      padding: 2px 5px;
+    }
+    
+    .border-b {
+      height: 20px;
+      margin: 10px;
+    }
+    
+   @media all and (-webkit-min-device-pixel-ratio: 1.5) {
+      @viewport {
+        width: device-width;
+        initial-scale:.5;
+        minimum-scale:.5;
+        maximum-scale:1;
+/*
+        zoom: 0.75;
+        min-zoom: 0.5;
+        max-zoom: 0.9;
+*/
+/*
+        "width=device-width,initial-scale=4.0,   
+       minimum-scale=2.0,maximum-scale=6.0"
+*/
+        background-color: #c00;
+      }
+/*
+      body {
+        background-color: #690;
+        zoom: reset;
+        -webkit-text-size-adjust: none;
+      }
+*/
+     html{
+       transform: scale(.9);
+       background-color: #c00;
+     }
+    }
+  </style>
+</head>
+
+<body>
+  <h3>文字單位比較, 那一個單位在螢幕顯示比例放大縮小中差異最小</h3>
+  <p class="txt-b">12px 以下的文字 chrome 不顯示 , 可至其他瀏覽器查看 </p>
+  <div class="txt-v">
+    <!--   px   -->
+    <div class="col-b">
+      <div style="font-size: 10px">我是文字 10px </div>
+      <div style="font-size: 11px">我是文字 11px </div>
+      <div style="font-size: 12px">我是文字 12px </div>
+      <div style="font-size: 13px">我是文字 13px </div>
+      <div style="font-size: 14px">我是文字 14px </div>
+      <div style="font-size: 15px">我是文字 15px </div>
+      <div style="font-size: 16px">我是文字 16px </div>
+      <div style="font-size: 17px">我是文字 17px </div>
+      <div style="font-size: 18px">我是文字 18px </div>
+      <div style="font-size: 19px">我是文字 19px </div>
+      <div style="font-size: 20px">我是文字 20px </div>
+      <div style="font-size: 21px">我是文字 21px </div>
+      <div style="font-size: 22px">我是文字 22px </div>
+      <div style="font-size: 23px">我是文字 23px </div>
+      <div style="font-size: 24px">我是文字 24px </div>
+    </div>
+    <!--  rem    -->
+    <div class="col-b">
+      <div style="font-size: .62rem">我是文字 0.62rem<sub>10px</sub></div>
+      <div style="font-size: .68rem">我是文字 0.68rem<sub>11px</sub></div>
+      <div style="font-size: .75rem">我是文字 0.75rem<sub>12px</sub></div>
+      <div style="font-size: .81rem">我是文字 0.81rem<sub>13px</sub></div>
+      <div style="font-size: .87rem">我是文字 0.87rem<sub>14px</sub></div>
+      <div style="font-size: .93rem">我是文字 0.93rem<sub>15px</sub></div>
+      <div style="font-size: 1rem">我是文字 1rem<sub>16px</sub></div>
+      <div style="font-size: 1.06rem">我是文字 1.06rem<sub>17px</sub></div>
+      <div style="font-size: 1.12rem">我是文字 1.12rem<sub>18px</sub></div>
+      <div style="font-size: 1.18rem">我是文字 1.18rem<sub>19px</sub></div>
+      <div style="font-size: 1.25rem">我是文字 1.25rem<sub>20px</sub></div>
+      <div style="font-size: 1.31rem">我是文字 1.31rem<sub>21px</sub></div>
+      <div style="font-size: 1.37rem">我是文字 1.37rem<sub>22px</sub></div>
+      <div style="font-size: 1.43rem">我是文字 1.43rem<sub>23px</sub></div>
+      <div style="font-size: 1.5rem">我是文字 1.5rem<sub>24px</sub></div>
+    </div>
+    <!--  %  -->
+    <div class="col-b">
+      <div style="font-size: 62.5%">我是文字 62.5%<sub>10px</sub></div>
+      <div style="font-size: 68.8%">我是文字 68.8%<sub>11px</sub></div>
+      <div style="font-size: 75%">我是文字 75%<sub>12px</sub></div>
+      <div style="font-size: 81.3%">我是文字 81.3%<sub>13px</sub></div>
+      <div style="font-size: 87.5%">我是文字 87.5%<sub>14px</sub></div>
+      <div style="font-size: 93.8%">我是文字 93.8%<sub>15px</sub></div>
+      <div style="font-size: 100%">我是文字 100%<sub>16px</sub></div>
+      <div style="font-size: 106.3%">我是文字 106.3%<sub>17px</sub></div>
+      <div style="font-size: 112.5%">我是文字 112.5%<sub>18px</sub></div>
+      <div style="font-size: 118.8%">我是文字 118.8%<sub>19px</sub></div>
+      <div style="font-size: 125%">我是文字 125%<sub>20px</sub></div>
+      <div style="font-size: 131.3%">我是文字 131.3%<sub>21px</sub></div>
+      <div style="font-size: 137.5%">我是文字 137.5%<sub>22px</sub></div>
+      <div style="font-size: 143.8%">我是文字 143.8%<sub>23px</sub></div>
+      <div style="font-size: 150%">我是文字 150%<sub>24px</sub></div>
+    </div>
+    <!--  pt  -->
+    <div class="col-b">
+      <div style="font-size: 7.5pt">我是文字 7.5pt<sub>10px</sub></div>
+      <div style="font-size: 8.25pt">我是文字 8.25pt<sub>11px</sub></div>
+      <div style="font-size: 9pt">我是文字 9pt<sub>12px</sub></div>
+      <div style="font-size: 10pt">我是文字 10pt<sub>13px</sub></div>
+      <div style="font-size: 11pt">我是文字 11pt<sub>14px</sub></div>
+      <div style="font-size: 11.25pt">我是文字 11.25pt<sub>15px</sub></div>
+      <div style="font-size: 12pt">我是文字 12pt<sub>16px</sub></div>
+      <div style="font-size: 13pt">我是文字 13pt<sub>17px</sub></div>
+      <div style="font-size: 14pt">我是文字 14pt<sub>18px</sub></div>
+      <div style="font-size: 14.25pt">我是文字 14.25pt<sub>19px</sub></div>
+      <div style="font-size: 15pt">我是文字 15pt<sub>20px</sub></div>
+      <div style="font-size: 16pt">我是文字 16pt<sub>21px</sub></div>
+      <div style="font-size: 17pt">我是文字 17pt<sub>22px</sub></div>
+      <div style="font-size: 17.25pt">我是文字 17.25pt<sub>23px</sub></div>
+      <div style="font-size: 18pt">我是文字 18pt<sub>24px</sub></div>
+    </div>
+  </div>
+  <div class="txt-v">
+    <div class="border-b" style="border: 1px solid #369;">我是 border 1px </div>
+    <div class="border-b" style="border: .06rem solid #690;">我是 border 0.06rem </div>
+    <div class="border-b" style="border: .75pt solid #ff9800;">我是 border 0.75pt </div>
+  </div>
+</body>
+<!--http://www.kangting.tw/2013/12/viewport_20.html-->
+<!--
+<meta name="viewport"
+       content="width=device-width,initial-scale=4.0,   
+       minimum-scale=2.0,maximum-scale=6.0">
+-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, shrink-to-fit=no">-->
+<!-- <meta name="handheldfriendly" content="true">-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-zoom=fixed">-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no,maximum-scale=1.0, minimum-scale=1.0, shrink-to-fit=no">-->
+<!--<meta name="viewport" content="min-width=1680px, initial-scale=0.5, user-scalable=no, shrink-to-fit=no, target-densitydpi=96">-->
+<!-- 螢幕辨識率的設定 -->
+<!--
+  <meta name="viewport" content="target-densitydpi=device-dpi" />
+	<meta name="viewport" content="target-densitydpi=high-dpi" />
+	<meta name="viewport" content="target-densitydpi=medium-dpi" />
+	<meta name="viewport" content="target-densitydpi=low-dpi" />
+	<meta name="viewport" content="target-densitydpi=200" />
+	<meta name="viewport" content="target-densitydpi=96" />
+-->
+<!--
+https://websemantics.uk/tools/convert-pixel-point-em-rem-percent/
+transform: scale(.5); 12px 以下的縮小運用 
+文字單位比較 
+rem | px | pt | % 
+框邊單位比較 
+
+border | padding | margin 
+
+dip 的測試 min-resolution
+"@media screen and (min-resolution: 72dpi) and (max-resolution: 191dpi) {
+        .retina{display:none;}
+}"
+顯示比 100 | 150 
+1024 1280 1366 1440 1920
+-->
+
+</html>
